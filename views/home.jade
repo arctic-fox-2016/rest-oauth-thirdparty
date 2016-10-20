@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  .container-fluid
+    if messages.error
+      .alert.alert-danger(role='alert')
+        for error in messages.error
+          div= error.msg
+    if messages.success
+      .alert.alert-success(role='alert')
+        for success in messages.success
+          div= success.msg
+    if messages.info
+      .alert.alert-info(role='alert')
+        for info in messages.info
+          div= info.msg
+
+    .row
+      .col-sm-4
+        .panel
+          .panel-body
+            h3 Brendan Eich
+            p  is an American technologist and creator of the JavaScript programming language. He co-founded the Mozilla project,the Mozilla Foundation and the Mozilla Corporation, and served as the Mozilla Corporation's chief technical officer and briefly its chief executive officer. He is the CEO of Brave Software
+            a.btn.btn-default(href='#', role='button') View details
+            img.img-responsive(src='https://raw.githubusercontent.com/sahbanagold/sahbanagold.github.io/master/images/man-behind-tech/brendan-eich-2.jpg',title='brendan-eich')
+
+      .col-sm-4
+        .panel
+          .panel-body
+            h3 Dennis MacAlistair Ritchie
+            p  was an American computer scientist. He created the C programming language and, with long-time colleague Ken Thompson, the Unix operating system
+            a.btn.btn-default(href='#', role='button') View details
+            img.img-responsive(src='https://raw.githubusercontent.com/sahbanagold/sahbanagold.github.io/master/images/man-behind-tech/dennis_ritchie-4.jpg', title='dennis-ritchie')
+      .col-sm-4
+        .panel
+          .panel-body
+            h3 Ryan Dahl
+            p started Node.js, an open-source Web server with a lot of buzz, yet I can't find any background on this individual that has created this incredible software
+            a.btn.btn-default(href='#', role='button') View details
+            img.img-responsive(src='https://raw.githubusercontent.com/sahbanagold/sahbanagold.github.io/master/images/man-behind-tech/ryaan-dahl.jpg',title='ryaan-dahl')
